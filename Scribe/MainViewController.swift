@@ -7,12 +7,28 @@
 //
 
 import UIKit
+import Speech
+import AVFoundation
 
 class MainViewController: UIViewController {
-
+    
+    @IBOutlet weak var transcriptionTextField: UITextView!
+    @IBOutlet weak var activitySpinner: UIActivityIndicatorView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        activitySpinner.isHidden = true
+    }
+    
+}
+
+extension MainViewController {
+    
+    func requestSpeechAuthorization() {
+        SFSpeechRecognizer.requestAuthorization { authStatus in
+            if authStatus == .authorized {
+                
+            }
+        }
     }
     
 }

@@ -14,10 +14,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Scribe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="Scribe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -30,7 +30,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scribe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1zH-eG-bDy">
-                                        <rect key="frame" x="162" y="26" width="51" height="21"/>
+                                        <rect key="frame" x="163" y="27" width="49" height="20"/>
                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -44,12 +44,12 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PLAY + TRANSCRIBE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jcP-r3-DKC">
-                                <rect key="frame" x="106" y="638" width="163" height="21"/>
+                                <rect key="frame" x="104" y="639" width="167" height="20"/>
                                 <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NP3-UL-8J2" customClass="CircleButton" customModule="Scribe" customModuleProvider="target">
-                                <rect key="frame" x="157" y="567" width="60" height="60"/>
+                                <rect key="frame" x="157" y="568" width="60" height="60"/>
                                 <color key="backgroundColor" red="1" green="0.64313725490196072" blue="0.53725490196078429" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="b9k-Ui-JhH"/>
@@ -62,18 +62,27 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="transcribed text will go here." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5CI-aQ-9yp">
-                                <rect key="frame" x="20" y="75" width="335" height="472"/>
+                                <rect key="frame" x="20" y="75" width="335" height="473"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="textColor" white="0.4331325954861111" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Q7U-7N-D6Q">
+                                <rect key="frame" x="157.5" y="568.5" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="48M-GW-xyL"/>
+                                    <constraint firstAttribute="width" constant="60" id="Ckg-NA-2Mm"/>
+                                </constraints>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Q7U-7N-D6Q" firstAttribute="centerX" secondItem="NP3-UL-8J2" secondAttribute="centerX" id="EE0-FM-0tB"/>
                             <constraint firstItem="rls-MF-4xk" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="IMi-of-PnO"/>
                             <constraint firstAttribute="trailing" secondItem="rls-MF-4xk" secondAttribute="trailing" id="OpN-Wd-Wtw"/>
                             <constraint firstItem="NP3-UL-8J2" firstAttribute="top" secondItem="5CI-aQ-9yp" secondAttribute="bottom" constant="20" id="RSt-Xa-elX"/>
+                            <constraint firstItem="Q7U-7N-D6Q" firstAttribute="centerY" secondItem="NP3-UL-8J2" secondAttribute="centerY" id="TbS-Qm-2uf"/>
                             <constraint firstItem="jcP-r3-DKC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Z2O-Bc-Lg1"/>
                             <constraint firstItem="rls-MF-4xk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bf4-lv-E7C"/>
                             <constraint firstItem="5CI-aQ-9yp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="gUH-qu-PRw"/>
@@ -84,6 +93,10 @@
                             <constraint firstItem="jcP-r3-DKC" firstAttribute="top" secondItem="NP3-UL-8J2" secondAttribute="bottom" constant="11.5" id="xU4-Nb-Qiz"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="activitySpinner" destination="Q7U-7N-D6Q" id="fw3-zS-JQn"/>
+                        <outlet property="transcriptionTextField" destination="5CI-aQ-9yp" id="6tV-PB-Gi9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

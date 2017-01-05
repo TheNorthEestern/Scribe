@@ -14,6 +14,7 @@
 		AFEF7D8F1E1EA6F500DFF240 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFEF7D8D1E1EA6F500DFF240 /* LaunchScreen.storyboard */; };
 		AFEF7D991E1ECB9D00DFF240 /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFEF7D981E1ECB9D00DFF240 /* Rubik-Regular.ttf */; };
 		AFEF7D9E1E1ED1F700DFF240 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEF7D9D1E1ED1F700DFF240 /* CircleButton.swift */; };
+		AFEF7DA11E1EDD7D00DFF240 /* test.m4a in Resources */ = {isa = PBXBuildFile; fileRef = AFEF7DA01E1EDD7D00DFF240 /* test.m4a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		AFEF7D901E1EA6F500DFF240 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFEF7D981E1ECB9D00DFF240 /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
 		AFEF7D9D1E1ED1F700DFF240 /* CircleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
+		AFEF7DA01E1EDD7D00DFF240 /* test.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.m4a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		AFEF7D831E1EA6F500DFF240 /* Scribe */ = {
 			isa = PBXGroup;
 			children = (
+				AFEF7D9F1E1EDD7400DFF240 /* Media */,
 				AFEF7D9C1E1ED1BF00DFF240 /* Controllers */,
 				AFEF7D9B1E1ED1BA00DFF240 /* Views */,
 				AFEF7D9A1E1ED1B600DFF240 /* Models */,
@@ -108,6 +111,14 @@
 				AFEF7D841E1EA6F500DFF240 /* AppDelegate.swift */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		AFEF7D9F1E1EDD7400DFF240 /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				AFEF7DA01E1EDD7D00DFF240 /* test.m4a */,
+			);
+			name = Media;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,6 +184,7 @@
 				AFEF7D8F1E1EA6F500DFF240 /* LaunchScreen.storyboard in Resources */,
 				AFEF7D991E1ECB9D00DFF240 /* Rubik-Regular.ttf in Resources */,
 				AFEF7D8C1E1EA6F500DFF240 /* Assets.xcassets in Resources */,
+				AFEF7DA11E1EDD7D00DFF240 /* test.m4a in Resources */,
 				AFEF7D8A1E1EA6F500DFF240 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

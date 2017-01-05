@@ -8,8 +8,6 @@
 
 import UIKit
 
-
-
 @IBDesignable class CircleButton : UIButton {
     @IBInspectable var cornerRadius: CGFloat = 20.0 {
         didSet {
