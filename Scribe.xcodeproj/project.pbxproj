@@ -54,14 +54,22 @@
 		AFEF7D831E1EA6F500DFF240 /* Scribe */ = {
 			isa = PBXGroup;
 			children = (
+				AFEF7D961E1EBE6400DFF240 /* Storyboards */,
 				AFEF7D841E1EA6F500DFF240 /* AppDelegate.swift */,
 				AFEF7D861E1EA6F500DFF240 /* ViewController.swift */,
-				AFEF7D881E1EA6F500DFF240 /* Main.storyboard */,
 				AFEF7D8B1E1EA6F500DFF240 /* Assets.xcassets */,
-				AFEF7D8D1E1EA6F500DFF240 /* LaunchScreen.storyboard */,
 				AFEF7D901E1EA6F500DFF240 /* Info.plist */,
 			);
 			path = Scribe;
+			sourceTree = "<group>";
+		};
+		AFEF7D961E1EBE6400DFF240 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				AFEF7D8D1E1EA6F500DFF240 /* LaunchScreen.storyboard */,
+				AFEF7D881E1EA6F500DFF240 /* Main.storyboard */,
+			);
+			name = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
