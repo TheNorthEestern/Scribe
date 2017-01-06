@@ -30,7 +30,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scribe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1zH-eG-bDy">
-                                        <rect key="frame" x="163" y="27" width="49" height="20"/>
+                                        <rect key="frame" x="162.5" y="27" width="50.5" height="20"/>
                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -44,7 +44,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PLAY + TRANSCRIBE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jcP-r3-DKC">
-                                <rect key="frame" x="104" y="639" width="167" height="20"/>
+                                <rect key="frame" x="106.5" y="639" width="162.5" height="20"/>
                                 <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -60,6 +60,9 @@
                                         <real key="value" value="30"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="transcribeButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DMF-IE-wVh"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="transcribed text will go here." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5CI-aQ-9yp">
                                 <rect key="frame" x="20" y="75" width="335" height="473"/>
@@ -68,8 +71,8 @@
                                 <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Q7U-7N-D6Q">
-                                <rect key="frame" x="157.5" y="568.5" width="60" height="60"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Q7U-7N-D6Q">
+                                <rect key="frame" x="157" y="568" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="48M-GW-xyL"/>
                                     <constraint firstAttribute="width" constant="60" id="Ckg-NA-2Mm"/>

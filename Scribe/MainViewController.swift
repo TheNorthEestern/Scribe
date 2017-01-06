@@ -20,9 +20,20 @@ class MainViewController: UIViewController {
         activitySpinner.isHidden = true
     }
     
+    @IBAction func transcribeButtonWasPressed(_ sender: UIButton) {
+        activitySpinner.isHidden = false
+        activitySpinner.startAnimating()
+        requestSpeechAuthorization()
+    }
 }
 
-extension MainViewController {
+extension MainViewController : AVAudioPlayerDelegate {
+    
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+        player.stop()
+        activitySpinner.stopAnimating()
+        activitySpinner.isHidden = true
+    }
     
     func requestSpeechAuthorization() {
         SFSpeechRecognizer.requestAuthorization { authStatus in
@@ -31,10 +42,22 @@ extension MainViewController {
                     do {
                         let sound = try AVAudioPlayer(contentsOf: path)
                         self.audioPlayer = sound
+                        self.audioPlayer.delegate = self
                         sound.play()
                     } catch {
                         print("Something went wrong!")
                     }
+                    
+                    let recognizer = SFSpeechRecognizer()
+                    let request = SFSpeechURLRecognitionRequest(url: path)
+                    recognizer?.recognitionTask(with: request) { (result, error) in
+                        if let error = error {
+                            print("There was an error: \(error)")
+                        } else {
+                            self.transcriptionTextField.text = (result?.bestTranscription.formattedString)! as String
+                        }
+                    }
+                    
                 }
             }
         }

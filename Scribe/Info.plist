@@ -40,6 +40,8 @@
 	<array>
 		<string>Rubik-Regular.ttf</string>
 	</array>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>&quot;Scribe&quot; wants to use your microphone to transcribe text.</string>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
 </dict>
